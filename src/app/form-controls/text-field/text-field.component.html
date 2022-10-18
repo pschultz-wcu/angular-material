@@ -1,0 +1,13 @@
+<mat-form-field class="form-control" appearance="outline">
+  <mat-label>Legal First Name</mat-label>
+  <input
+    matInput
+    [formControl]="textFormControl"
+    [errorStateMatcher]="matcher"
+    placeholder="Ex. John Smith"
+    required
+  />
+  <mat-error *ngIf="textFormControl.hasError('required')">
+    Legal First Name is <strong>required</strong>
+  </mat-error>
+</mat-form-field>
