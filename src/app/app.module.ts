@@ -11,6 +11,7 @@ import { HFormBtnGroupComponent } from './buttons/h-form-btn-group/h-form-btn-gr
 import { ContinueBtnComponent } from   './buttons/continue-btn/continue-btn.component';
 import { TextFieldComponent } from './form-controls/text-field/text-field.component';
 import { SelectFieldComponent } from './form-controls/select-field/select-field.component';
+import { NavbarComponent } from './navbar/navbar.component';
  
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { SelectFieldComponent } from './form-controls/select-field/select-field.
     ContinueBtnComponent,
     TextFieldComponent,
     SelectFieldComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
