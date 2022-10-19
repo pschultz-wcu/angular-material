@@ -12,6 +12,7 @@ import { ContinueBtnComponent } from   './components/buttons/continue-btn/contin
 import { TextFieldComponent } from './components/form-controls/text-field/text-field.component';
 import { SelectFieldComponent } from './components/form-controls/select-field/select-field.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
  
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     TextFieldComponent,
     SelectFieldComponent,
     NavbarComponent,
+    ProgressBarComponent,
   ],
   imports: [
     BrowserModule,
