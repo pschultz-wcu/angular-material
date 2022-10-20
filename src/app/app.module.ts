@@ -15,6 +15,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
 import { HomePageCardComponent } from './components/cards/home-page-card/home-page-card.component';
 import { FormCardComponent } from './components/cards/form-card/form-card.component';
+import { FileCardComponent } from './components/cards/file-card/file-card.component';
  
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FormCardComponent } from './components/cards/form-card/form-card.compon
     ProgressBarComponent,
     HomePageCardComponent,
     FormCardComponent,
+    FileCardComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,47 @@
+<div class="component-container">
+  <p>Toggle Form Card State:</p>
+  <section class="card-state-container">
+    <mat-radio-group [(ngModel)]="cardState">
+      <mat-radio-button class="card-state-toggle" value="valid">
+        Valid
+      </mat-radio-button>
+      <mat-radio-button class="card-state-toggle" value="invalid">
+        Invalid
+      </mat-radio-button>
+    </mat-radio-group>
+  </section>
+</div>
+
+<div class="file-card-container" [ngSwitch]="cardState">
+  <!-- valid Card -->
+  <mat-card    
+    *ngSwitchCase="cardStateIsValid"
+    [class.mat-elevation-z0]="true"
+    style="border: 1px solid #b6b6b6"
+  >
+    <div class="file-card-title-container">
+      <span class="file-card-title">Resume</span>
+      <img
+        src="../../../../assets/icons/exit.svg"
+        alt=""
+      />
+    </div>
+    <p class="file-card-desc">
+      annie_pyle_resume.pdf
+    </p>
+  </mat-card>
+
+  <!-- Invalid Card -->
+  <mat-card
+    *ngSwitchCase="cardStateIsInvalid"
+    [class.mat-elevation-z0]="true"
+    style="border: 1px solid #b6b6b6"
+  >
+    <div class="file-card-title-container">
+      <span class="file-card-title">Resume</span>      
+    </div>
+    <p class="file-card-desc">
+      File Size Exceeds 5MB
+    </p>
+  </mat-card>
+</div>
