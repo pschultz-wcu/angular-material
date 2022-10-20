@@ -1,13 +1,10 @@
-.mat-card {
-  border-radius: 0;
-}
-
 .card-continue-btn {
   height: 52px;
   min-width: calc(100% + 32px);
   margin-left: -16px;
-  margin-bottom: -16px !important;
-  border-radius: 0;  
+  margin-bottom: -16px !important;  
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   font-weight: 600;
 }
 

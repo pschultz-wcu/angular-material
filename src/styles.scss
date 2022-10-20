@@ -105,11 +105,15 @@ body { margin: 0; }
 // Reset defaults
 ::ng-deep .mat-button-toggle-group-appearance-standard {
   border: none !important;
-  border-radius: none;
 }
 
-.mat-button-toggle-group-appearance-standard {
+.mat-button-toggle-group-appearance-standard {    
   border: solid 1px #f4f9fa;
+}
+
+.mat-button-toggle-appearance-standard {
+  color: mat.get-color-from-palette($wcu-teal-palette, 800) !important;
+  font-weight: 700 !important;
 }
 
 // Horizontal form buttons
@@ -133,6 +137,7 @@ body { margin: 0; }
 
 .mat-button-toggle-button {
   border: 1px solid $border-light !important;
+  border-radius: 4px;    
 }
 
 // Checked/active button styles
@@ -140,6 +145,7 @@ body { margin: 0; }
   background-color: mat.get-color-from-palette($wcu-teal-palette, 800);  
   color: white !important;
   font-weight: 700;
+  border-radius: 4px;  
 }
 
 .mat-button-toggle-group-appearance-standard.mat-button-toggle-vertical .mat-button-toggle + .mat-button-toggle {
@@ -159,7 +165,11 @@ body { margin: 0; }
 // Form controls
 .mat-form-field-appearance-outline .mat-form-field-outline {
   background-color: white !important;
-  color: $border-light;  
+  color: $border-light;    
+}
+
+.mat-form-field-label {
+  font-weight: 700 !important;
 }
 
 .form-control {
