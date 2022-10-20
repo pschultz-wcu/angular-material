@@ -1,0 +1,12 @@
+::ng-deep .mat-expansion-panel-header {
+  padding: 0 24px 0 12px !important;
+}
+
+::ng-deep .mat-expansion-panel-body {
+  padding: 0 !important;
+}
+
+::ng-deep #cdk-accordion-child-1 > div > p {
+  margin-left: 12px;
+  margin-right: 12px;
+}
