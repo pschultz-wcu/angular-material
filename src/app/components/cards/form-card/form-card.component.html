@@ -1,0 +1,55 @@
+<div class="component-container">
+  <p>Toggle Form Card State:</p>
+  <section class="card-state-container">
+    <mat-radio-group [(ngModel)]="cardState">
+      <mat-radio-button class="card-state-toggle" value="active">
+        Active
+      </mat-radio-button>
+      <mat-radio-button class="card-state-toggle" value="inactive">
+        Inactive
+      </mat-radio-button>
+    </mat-radio-group>
+  </section>
+</div>
+
+<div class="form-card-container" [ngSwitch]="cardState">
+  <!-- Active Card -->
+  <mat-card
+    *ngSwitchCase="cardStateIsActive"
+    [class.mat-elevation-z0]="true"
+    style="border: 1px solid #007488"
+  >
+    <div class="form-card-title-container">
+      <span class="form-card-title">Working Professional</span>
+      <img
+        src="../../../../assets/icons/form-card-checkmark-active.svg"
+        alt=""
+      />
+    </div>
+    <p class="form-card-desc">
+      Take more time to complete your program by taking fewer courses per term.
+      This pace is ideal for working students, as well as parents and at-home
+      caregivers.
+    </p>
+  </mat-card>
+
+  <!-- Inactive Card -->
+  <mat-card
+    *ngSwitchCase="cardStateIsInactive"
+    [class.mat-elevation-z0]="true"
+    style="border: 1px solid #b6b6b6"
+  >
+    <div class="form-card-title-container">
+      <span class="form-card-title">Working Professional</span>
+      <img
+        src="../../../../assets/icons/form-card-checkmark-inactive.svg"
+        alt=""
+      />
+    </div>
+    <p class="form-card-desc">
+      Take more time to complete your program by taking fewer courses per term.
+      This pace is ideal for working students, as well as parents and at-home
+      caregivers.
+    </p>
+  </mat-card>
+</div>

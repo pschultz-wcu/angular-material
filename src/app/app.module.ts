@@ -14,6 +14,7 @@ import { SelectFieldComponent } from './components/form-controls/select-field/se
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
 import { HomePageCardComponent } from './components/cards/home-page-card/home-page-card.component';
+import { FormCardComponent } from './components/cards/form-card/form-card.component';
  
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { HomePageCardComponent } from './components/cards/home-page-card/home-pa
     NavbarComponent,
     ProgressBarComponent,
     HomePageCardComponent,
+    FormCardComponent,
   ],
   imports: [
     BrowserModule,
