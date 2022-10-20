@@ -13,6 +13,7 @@ import { TextFieldComponent } from './components/form-controls/text-field/text-f
 import { SelectFieldComponent } from './components/form-controls/select-field/select-field.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
+import { HomePageCardComponent } from './components/cards/home-page-card/home-page-card.component';
  
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ProgressBarComponent } from './components/progress-bar/progress-bar.com
     SelectFieldComponent,
     NavbarComponent,
     ProgressBarComponent,
+    HomePageCardComponent,
   ],
   imports: [
     BrowserModule,
