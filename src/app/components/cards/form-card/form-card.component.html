@@ -16,8 +16,8 @@
   <!-- Active Card -->
   <mat-card
     *ngSwitchCase="cardStateIsActive"
-    [class.mat-elevation-z0]="true"
-    style="border: 1px solid #007488"
+    [class.mat-elevation-z2]="true"    
+    style="border: 1px solid #007488;"
   >
     <div class="form-card-title-container">
       <span class="form-card-title">Working Professional</span>
@@ -36,15 +36,12 @@
   <!-- Inactive Card -->
   <mat-card
     *ngSwitchCase="cardStateIsInactive"
-    [class.mat-elevation-z0]="true"
-    style="border: 1px solid #b6b6b6"
+    [class.mat-elevation-z2]="true"
+    style="border: 1px solid #b6b6b6;"
   >
-    <div class="form-card-title-container">
+    <div class="form-card-title-container" style="height: 24px !important;">
       <span class="form-card-title">Working Professional</span>
-      <img
-        src="../../../../assets/icons/form-card-checkmark-inactive.svg"
-        alt=""
-      />
+      <div></div>
     </div>
     <p class="form-card-desc">
       Take more time to complete your program by taking fewer courses per term.
