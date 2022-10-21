@@ -1,13 +1,153 @@
 <mat-accordion multi="true">
-  <mat-expansion-panel showToggle="true">
+  <mat-expansion-panel showToggle="true" class="expansion-panel-parent">
     <mat-expansion-panel-header>
       Registered Nurse to MSN
     </mat-expansion-panel-header>
 
-    <mat-accordion multi="false">
-      <mat-expansion-panel>
+    <mat-accordion multi="false" class="accordion-child">
+      <mat-expansion-panel
+        class="expansion-panel-child"
+        (opened)="panel1OpenState = true"
+        (closed)="panel1OpenState = false"
+        hideToggle="true"
+      >
         <mat-expansion-panel-header>
-          <mat-panel-title>RN to MSN - Nurse Leader Track</mat-panel-title>
+          <mat-panel-title>Nurse Leader Track</mat-panel-title>
+          <img
+            *ngIf="panel1OpenState"
+            src="../../../assets/icons/form-card-checkmark-active.svg"
+            alt=""
+          />
+          <img
+            *ngIf="!panel1OpenState"
+            src="../../../assets/icons/form-card-checkmark-inactive.svg"
+            alt=""
+          />
+        </mat-expansion-panel-header>
+
+        <p class="exp-panel-child-content">
+          <i
+            >You must be a licensed registered nurse and have completed a
+            Bachelor of Science in Nursing degree or a bachelor's degree in a
+            closely related field to apply for this program.</i
+          >
+        </p>
+        <p>
+          Where would you like to pursue your RN to MSN - Family Nurse
+          Practitioner Track at?
+        </p>
+      </mat-expansion-panel>
+      <mat-expansion-panel
+        class="expansion-panel-child"
+        (opened)="panel2OpenState = true"
+        (closed)="panel2OpenState = false"
+        hideToggle="true"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>Family Nurse Practitioner Track</mat-panel-title>
+          <img
+            *ngIf="panel2OpenState"
+            src="../../../assets/icons/form-card-checkmark-active.svg"
+            alt=""
+          />
+          <img
+            *ngIf="!panel2OpenState"
+            src="../../../assets/icons/form-card-checkmark-inactive.svg"
+            alt=""
+          />
+        </mat-expansion-panel-header>
+        <p>
+          <i
+            >You must be a licensed registered nurse and have completed a
+            Bachelor of Science in Nursing degree or a bachelor's degree in a
+            closely related field to apply for this program.</i
+          >
+        </p>
+        <p>
+          Where would you like to pursue your RN to MSN - Family Nurse
+          Practitioner Track at?
+        </p>
+      </mat-expansion-panel>
+      <mat-expansion-panel
+        class="expansion-panel-child"
+        (opened)="panel3OpenState = true"
+        (closed)="panel3OpenState = false"
+        hideToggle="true"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>Advanced Generalist Track</mat-panel-title>
+          <img
+            *ngIf="panel3OpenState"
+            src="../../../assets/icons/form-card-checkmark-active.svg"
+            alt=""
+          />
+          <img
+            *ngIf="!panel3OpenState"
+            src="../../../assets/icons/form-card-checkmark-inactive.svg"
+            alt=""
+          />
+        </mat-expansion-panel-header>
+        <p>
+          <i
+            >You must be a licensed registered nurse and have completed a
+            Bachelor of Science in Nursing degree or a bachelor's degree in a
+            closely related field to apply for this program.</i
+          >
+        </p>
+        <p>
+          Where would you like to pursue your RN to MSN - Family Nurse
+          Practitioner Track at?
+        </p>
+      </mat-expansion-panel>
+      <mat-expansion-panel
+        class="expansion-panel-child"
+        (opened)="panel4OpenState = true"
+        (closed)="panel4OpenState = false"
+        hideToggle="true"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>Informatics Track</mat-panel-title>
+          <img
+            *ngIf="panel4OpenState"
+            src="../../../assets/icons/form-card-checkmark-active.svg"
+            alt=""
+          />
+          <img
+            *ngIf="!panel4OpenState"
+            src="../../../assets/icons/form-card-checkmark-inactive.svg"
+            alt=""
+          />
+        </mat-expansion-panel-header>
+        <p>
+          <i
+            >You must be a licensed registered nurse and have completed a
+            Bachelor of Science in Nursing degree or a bachelor's degree in a
+            closely related field to apply for this program.</i
+          >
+        </p>
+        <p>
+          Where would you like to pursue your RN to MSN - Family Nurse
+          Practitioner Track at?
+        </p>
+      </mat-expansion-panel>
+      <mat-expansion-panel
+        class="expansion-panel-child"
+        (opened)="panel5OpenState = true"
+        (closed)="panel5OpenState = false"
+        hideToggle="true"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>Nurse Educator Track</mat-panel-title>
+          <img
+            *ngIf="panel5OpenState"
+            src="../../../assets/icons/form-card-checkmark-active.svg"
+            alt=""
+          />
+          <img
+            *ngIf="!panel5OpenState"
+            src="../../../assets/icons/form-card-checkmark-inactive.svg"
+            alt=""
+          />
         </mat-expansion-panel-header>
         <p>
           <i
