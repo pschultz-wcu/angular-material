@@ -37,14 +37,14 @@
 }
 
 ::ng-deep .expansion-panel-child .mat-expansion-panel-header {
-  padding: 0px 16px !important;
+  padding: 6px 16px !important;
 }
 
-.expansion-panel-child,
-::ng-deep .expansion-panel-child > .mat-expansion-panel-header {
-  //background-color: #F6F6F6;
-  //background: #F6F6F6 !important;
-}
+// .expansion-panel-child,
+// ::ng-deep .expansion-panel-child > .mat-expansion-panel-header {
+//   background-color: #F6F6F6;
+//   background: #F6F6F6 !important;
+// }
 
 ::ng-deep .mat-expansion-panel-content {
   font-size: 15px !important;
