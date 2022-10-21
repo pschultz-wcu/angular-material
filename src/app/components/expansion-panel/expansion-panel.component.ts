@@ -11,6 +11,9 @@ export class ExpansionPanelComponent implements OnInit {
   panel3OpenState = false;
   panel4OpenState = false;
   panel5OpenState = false;
+  panel6OpenState = false;
+  panel7OpenState = false;
+  panel8OpenState = false;
 
   constructor() {}
 
