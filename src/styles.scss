@@ -98,6 +98,11 @@ html, body { height: 100%; }
 body { margin: 0; } 
 .mat-app-background { background-color: $app-background !important; } 
 
+.content-container {
+  max-width: 768px;
+  margin: auto;
+}
+
 // Component styles
 
 // Form Buttons
