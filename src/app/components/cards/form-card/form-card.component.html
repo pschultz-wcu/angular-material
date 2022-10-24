@@ -15,9 +15,9 @@
 <div class="form-card-container" [ngSwitch]="cardState">
   <!-- Active Card -->
   <mat-card
+    class="form-card-active"
     *ngSwitchCase="cardStateIsActive"
-    [class.mat-elevation-z2]="true"    
-    style="border: 1px solid #007488;"
+    [class.mat-elevation-z2]="true"        
   >
     <div class="form-card-title-container">
       <span class="form-card-title">Working Professional</span>
@@ -34,11 +34,11 @@
   </mat-card>
 
   <!-- Inactive Card -->
-  <mat-card
+  <mat-card    
     *ngSwitchCase="cardStateIsInactive"
     [class.mat-elevation-z2]="true"    
   >
-    <div class="form-card-title-container" style="height: 24px !important;">
+    <div class="form-card-title-container">
       <span class="form-card-title">Working Professional</span>
       <img src="../../../../assets/icons/form-card-checkmark-inactive.svg" alt="">      
     </div>

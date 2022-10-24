@@ -1,3 +1,8 @@
+.home-page-card-collapsed, 
+.home-page-card-inactive {
+  border: 1px solid #b6b6b6;
+}
+
 .card-continue-btn {
   height: 52px;
   min-width: calc(100% + 32px);
@@ -16,6 +21,10 @@
 .home-page-card-step-number {
   font-size: 14px; 
   font-weight: 400;
+}
+
+.home-page-card-step-number-collapsed {
+  margin-left: 8px;
 }
 
 .home-page-card-ul {

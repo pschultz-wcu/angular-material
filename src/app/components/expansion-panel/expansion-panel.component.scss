@@ -1,3 +1,7 @@
+.accordion-parent {
+  margin-bottom: 32px;
+}
+
 ::ng-deep .expansion-panel-parent .mat-expansion-panel-spacing{
   margin-bottom: 12px !important;
 }
@@ -6,6 +10,10 @@
   font-weight: 400 !important;
   font-size: 17px !important;
   padding: 0 24px 0 12px !important;
+}
+
+.label-abbreviation {
+  font-weight: 700;
 }
 
 ::ng-deep .mat-content.mat-content-hide-toggle {

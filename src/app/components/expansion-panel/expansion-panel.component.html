@@ -1,7 +1,7 @@
 <mat-accordion multi="true">
   <mat-expansion-panel showToggle="true" class="expansion-panel-parent">
     <mat-expansion-panel-header>
-      Registered Nurse to MSN,&nbsp;<span style="font-weight: 700"
+      Registered Nurse to MSN,&nbsp;<span class="label-abbreviation"
         >RN to MSN</span
       >
     </mat-expansion-panel-header>
@@ -220,10 +220,10 @@
   </mat-expansion-panel>
 </mat-accordion>
 
-<mat-accordion style="margin-top: 32px" multi="true">
+<mat-accordion class="accordion-parent" multi="true">
   <mat-expansion-panel showToggle="true" class="expansion-panel-parent">
-    <mat-expansion-panel-header>
-      Master of Science in Nursing,&nbsp;<span style="font-weight: 700"
+    <mat-expansion-panel-header class="expansion-panel-parent-label">
+      Master of Science in Nursing,&nbsp;<span class="label-abbreviation"
         >MSN</span
       >
     </mat-expansion-panel-header>
@@ -484,7 +484,9 @@
         hideToggle="true"
       >
         <mat-expansion-panel-header>
-          <mat-panel-title>Psychiatric-Mental Health Nurse Practitioner Track</mat-panel-title>
+          <mat-panel-title
+            >Psychiatric-Mental Health Nurse Practitioner Track</mat-panel-title
+          >
           <img
             *ngIf="panel7OpenState"
             src="../../../assets/icons/form-card-checkmark-active.svg"

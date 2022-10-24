@@ -55,9 +55,9 @@
 
   <!-- Inactive Card -->
   <mat-card
+    class="home-page-card-inactive"
     *ngSwitchCase="cardStateIsInactive"
-    [class.mat-elevation-z0]="true"
-    style="border: 1px solid #b6b6b6;"
+    [class.mat-elevation-z0]="true"    
   >
     <div class="home-page-card-title-container">
       <p class="home-page-card-step-name">About Me</p>
@@ -124,15 +124,15 @@
 
   <!-- Collapsed Card -->
   <mat-card
+    class="home-page-card-collapsed"
     *ngSwitchCase="cardStateIsCollapsed"
-    [class.mat-elevation-z0]="true"
-    style="border: 1px solid #b6b6b6"
+    [class.mat-elevation-z0]="true"    
   >
     <div class="home-page-card-title-container">
       <span class="home-page-card-step-name">About Me</span>
       <div class="collapsed-step-number">
         <img src="../../../../assets/icons/checkmark.svg" alt="" />
-        <span class="home-page-card-step-number" style="margin-left: 8px"
+        <span class="home-page-card-step-number-collapsed"
           >Step 1</span
         >
       </div>
