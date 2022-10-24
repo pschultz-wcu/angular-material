@@ -8,15 +8,6 @@
   font-weight: 600;
 }
 
-.home-page-card-container {
-  margin-top: 12px;
-}
-
-.home-page-card-title {
-  display: flex; align-items: center; 
-  justify-content: space-between;
-}
-
 .home-page-card-step-name {
  font-size: 18px; 
   font-weight: 600;
@@ -55,16 +46,5 @@
   font-weight: 700;
   font-size: 16px;
   color: #b6b6b6;
-}
-
-.card-state-container {
-  display: flex;
-  align-content: center;
-  align-items: center;
-  height: 60px;
-}
-
-.card-state-toggle {
-  margin: 6px 10px;
 }
 

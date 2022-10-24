@@ -1,15 +1,11 @@
+/* 
+  Material Config
+*/
 
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
-// Plus imports for other components in your app.
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
 @include mat.core();
 
-// The warn palette is optional (defaults to red).
 $wcu-material-warn: mat.define-palette(mat.$red-palette);
 
 // Define color palettes
@@ -67,12 +63,9 @@ $wcu-orange-palette: (
  )
 );
 
-// Define theme primary and accent colors
 $wcu-primary: mat.define-palette($wcu-teal-palette, 800);
 $wcu-accent: mat.define-palette($wcu-orange-palette, 800);
 
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
 $wcu-material-theme: mat.define-light-theme((
   color: (
     primary: $wcu-primary,
@@ -81,18 +74,19 @@ $wcu-material-theme: mat.define-light-theme((
   )
 ));
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
 @include mat.all-component-themes($wcu-material-theme);
 
-/* You can add global styles to this file, and also import other style files */
+/*
+  Custom Variables
+*/
 
-// Variables 
 $app-background: #f4f9fa;
 $border-light: #b6b6b6;
 
-// Global styles
+/*
+  Global styles
+*/
+
 * { font-family: Montserrat, "Arial", sans-serif !important; }
 html, body { height: 100%; }
 body { margin: 0; } 
@@ -103,10 +97,11 @@ body { margin: 0; }
   margin: auto;
 }
 
-// Component styles
+/*
+  Shared Component styles 
+*/
 
 // Form Buttons
-
 // Reset defaults
 ::ng-deep .mat-button-toggle-group-appearance-standard {
   border: none !important;
@@ -173,15 +168,54 @@ body { margin: 0; }
   color: $border-light;    
 }
 
-.mat-form-field-label {
-  // font-weight: 700 !important;
-}
-
 .form-control {
   width: 100%;  
 }
 
-// Utilities for component inventory
+// Cards
+.form-card-container,
+.file-card-container,
+.home-page-card-container {
+  margin-top: 12px;
+}
+
+.form-card-title-container,
+.file-card-title-container,
+.home-page-card-title-container {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+}
+
+.form-card-title,
+.file-card-title {
+  font-size: 20px; 
+   font-weight: 600;
+}
+
+.form-card-desc,
+.file-card-desc {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+// Styles for card state toggle control
+.card-state-container {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.card-state-toggle {
+  margin: 6px 10px;
+}
+
+/*
+  Utility classes for page layout
+*/
 .content-container {
   padding-top: 36px;
 }
