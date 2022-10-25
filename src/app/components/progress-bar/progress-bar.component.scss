@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+::ng-deep .mat-progress-bar .mat-progress-bar-background {
+  width: 100% !important;
+}
+
 ::ng-deep .mat-progress-bar {
   height: 25px !important;
   border-radius: 25px !important;
