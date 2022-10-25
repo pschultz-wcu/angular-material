@@ -166,6 +166,7 @@ body { margin: 0; }
 .mat-form-field-appearance-outline .mat-form-field-outline {
   background-color: white !important;
   color: $border-light;    
+  border-radius: 4px;
 }
 
 .form-control {      
@@ -174,7 +175,7 @@ body { margin: 0; }
 }
 
 .mat-form-field-label {
-  // color: rgba(black, 0.87) !important;  
+  color: rgba(black, 0.87) !important;  
 }
 
 .mat-form-field.mat-focused .mat-form-field-label {
