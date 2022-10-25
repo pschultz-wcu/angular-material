@@ -1,6 +1,6 @@
-<mat-form-field class="form-control" appearance="outline">
+<mat-form-field class="form-control" appearance="outline" #selectFieldRef>
   <mat-label>Select an Online WCU Program</mat-label>
-  <mat-select required>
+  <mat-select (focus)="selectFieldRef.updateOutlineGap()" required>
     <mat-option *ngFor="let program of programs" [value]="program.value">
       {{ program.viewValue }}
     </mat-option>

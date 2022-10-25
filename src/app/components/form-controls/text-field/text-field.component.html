@@ -1,7 +1,8 @@
-<mat-form-field class="form-control" appearance="outline">
+<mat-form-field class="form-control" appearance="outline" #textFieldRef>
   <mat-label>Legal First Name</mat-label>
   <input
     matInput
+    (focus)="textFieldRef.updateOutlineGap()"
     [formControl]="textFormControl"
     [errorStateMatcher]="matcher"
     placeholder="Ex. John Smith"
