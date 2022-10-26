@@ -154,14 +154,6 @@ body { margin: 0; }
   border-top: none;
 }
 
-// Save and continue button
-.continue-btn {
-  border-radius: 0px !important;
-  height: 54px;
-  width: 100%;
-  font-weight: 700;
-}
-
 // Form controls
 .mat-form-field-appearance-outline .mat-form-field-outline {
   background-color: white !important;
@@ -236,6 +228,13 @@ body { margin: 0; }
 
 .component-container {  
   padding: 12px;
+}
+
+.button-container {  
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .component-container-no-gap, 
