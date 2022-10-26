@@ -20,68 +20,57 @@
 
 <div class="home-page-card-container" [ngSwitch]="cardState">
   <!-- Active Card -->
-  <mat-card 
-    *ngSwitchCase="cardStateIsActive"
-    [class.mat-elevation-z4]="true"
-  >
+  <mat-card *ngSwitchCase="cardStateIsActive" [class.mat-elevation-z4]="true">
     <div class="home-page-card-title-container">
       <p class="home-page-card-step-name">About Me</p>
       <p class="home-page-card-step-number">Step 1</p>
     </div>
-    <ul class="home-page-card-ul" style="margin-left: 0;">
-      <li class="home-page-card-li">
-        <!-- <img src="../../../../assets/icons/checkmark-blank.svg" alt="" /> -->
+    <ul class="home-page-card-ul" style="margin-left: 0">
+      <li class="home-page-card-li">        
         <span class="home-page-card-li-title">Personal Information</span>
       </li>
-      <li class="home-page-card-li">
-        <!-- <img src="../../../../assets/icons/checkmark-blank.svg" alt="" /> -->
+      <li class="home-page-card-li">        
         <span class="home-page-card-li-title">Phone Number & Email</span>
       </li>
-      <li class="home-page-card-li">
-        <!-- <img src="../../../../assets/icons/checkmark-blank.svg" alt="" /> -->
+      <li class="home-page-card-li">        
         <span class="home-page-card-li-title">Date of Birth & Sex</span>
       </li>
-      <li class="home-page-card-li">
-        <!-- <img src="../../../../assets/icons/checkmark-blank.svg" alt="" /> -->
+      <li class="home-page-card-li">        
         <span class="home-page-card-li-title">Current Mailing Address</span>
       </li>
-      <li class="home-page-card-li">
-        <!-- <img src="../../../../assets/icons/checkmark-blank.svg" alt="" /> -->
+      <li class="home-page-card-li">        
         <span class="home-page-card-li-title">Emergency Contact</span>
       </li>
     </ul>
-    <button mat-flat-button color="accent" class="card-continue-btn">Continue</button>
+    <button mat-flat-button color="accent" class="card-continue-btn">
+      Continue
+    </button>
   </mat-card>
 
   <!-- Inactive Card -->
   <mat-card
     class="home-page-card-inactive"
     *ngSwitchCase="cardStateIsInactive"
-    [class.mat-elevation-z0]="true"    
+    [class.mat-elevation-z0]="true"
   >
     <div class="home-page-card-title-container">
       <p class="home-page-card-step-name">About Me</p>
       <p class="home-page-card-step-number">Step 1</p>
     </div>
     <ul class="home-page-card-ul">
-      <li class="home-page-card-li">
-        <!-- <img src="../../../../assets/icons/checkmark-blank.svg" alt="" /> -->
+      <li class="home-page-card-li">        
         <span class="home-page-card-li-title">Personal Information</span>
       </li>
-      <li class="home-page-card-li">
-        <!-- <img src="../../../../assets/icons/checkmark-blank.svg" alt="" /> -->
+      <li class="home-page-card-li">        
         <span class="home-page-card-li-title">Phone Number & Email</span>
       </li>
-      <li class="home-page-card-li">
-        <!-- <img src="../../../../assets/icons/checkmark-blank.svg" alt="" /> -->
+      <li class="home-page-card-li">        
         <span class="home-page-card-li-title">Date of Birth & Sex</span>
       </li>
-      <li class="home-page-card-li">
-        <!-- <img src="../../../../assets/icons/checkmark-blank.svg" alt="" /> -->
+      <li class="home-page-card-li">        
         <span class="home-page-card-li-title">Current Mailing Address</span>
       </li>
-      <li class="home-page-card-li">
-        <!-- <img src="../../../../assets/icons/checkmark-blank.svg" alt="" /> -->
+      <li class="home-page-card-li">        
         <span class="home-page-card-li-title">Emergency Conact</span>
       </li>
     </ul>
@@ -95,30 +84,38 @@
     </div>
     <ul class="home-page-card-ul">
       <li class="home-page-card-li">
+        <span class="home-page-card-li-title completed"
+          >Personal Information</span
+        >
         <img src="../../../../assets/icons/checkmark.svg" alt="" />
-        <span class="home-page-card-li-title completed">Personal Information</span>
       </li>
       <li class="home-page-card-li">
+        <span class="home-page-card-li-title completed"
+          >Phone Number & Email</span
+        >
         <img src="../../../../assets/icons/checkmark.svg" alt="" />
-        <span class="home-page-card-li-title completed">Phone Number & Email</span>
       </li>
       <li class="home-page-card-li">
+        <span class="home-page-card-li-title completed"
+          >Date of Birth & Sex</span
+        >
         <img src="../../../../assets/icons/checkmark.svg" alt="" />
-        <span class="home-page-card-li-title completed">Date of Birth & Sex</span>
       </li>
       <li class="home-page-card-li">
+        <span class="home-page-card-li-title completed"
+          >Current Mailing Address</span
+        >
         <img src="../../../../assets/icons/checkmark.svg" alt="" />
-        <span class="home-page-card-li-title completed">Current Mailing Address</span>
       </li>
       <li class="home-page-card-li">
-        <img src="../../../../assets/icons/checkmark.svg" alt="" />
         <span class="home-page-card-li-title completed">Emergency Contact</span>
+        <img src="../../../../assets/icons/checkmark.svg" alt="" />
       </li>
     </ul>
     <div class="edit-btn-container">
-      
-      <button mat-flat-button class="card-edit-btn"> <img src="../../../../assets/icons/pencil.svg" alt="" />
-        Edit</button>
+      <button mat-flat-button class="card-edit-btn">
+        <img src="../../../../assets/icons/pencil.svg" alt="" /> Edit
+      </button>
     </div>
   </mat-card>
 
@@ -126,15 +123,13 @@
   <mat-card
     class="home-page-card-collapsed"
     *ngSwitchCase="cardStateIsCollapsed"
-    [class.mat-elevation-z0]="true"    
+    [class.mat-elevation-z0]="true"
   >
     <div class="home-page-card-title-container">
       <span class="home-page-card-step-name">About Me</span>
       <div class="collapsed-step-number">
         <img src="../../../../assets/icons/checkmark.svg" alt="" />
-        <span class="home-page-card-step-number-collapsed"
-          >Step 1</span
-        >
+        <span class="home-page-card-step-number-collapsed">Step 1</span>
       </div>
     </div>
   </mat-card>

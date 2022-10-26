@@ -36,6 +36,7 @@
 .home-page-card-li {
   display: flex; 
   align-items: center; 
+  justify-content: space-between;
   margin-bottom: 4px;
 }
 
@@ -45,7 +46,7 @@
 }
 
 .completed {
-  margin-left: 8px;
+  // margin-left: 8px;
 }
 
 .edit-btn-container {
@@ -58,5 +59,6 @@
   font-weight: 700;
   font-size: 16px;
   color: #b6b6b6;
+  padding: 0 0 0 16px;
 }
 
