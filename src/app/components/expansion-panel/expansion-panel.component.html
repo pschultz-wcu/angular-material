@@ -1,522 +1,705 @@
-<mat-accordion multi="true">
-  <mat-expansion-panel showToggle="true" class="expansion-panel-parent">
-    <mat-expansion-panel-header>
-      Registered Nurse to MSN,&nbsp;<span class="label-abbreviation"
-        >RN to MSN</span
-      >
-    </mat-expansion-panel-header>
+<div class="component-container">
+  <p>Toggle Expansion Panel State:</p>
+  <section class="card-state-container">
+    <mat-radio-group [(ngModel)]="panelState">
+      <mat-radio-button class="card-state-toggle" value="base">
+        Base
+      </mat-radio-button>
+      <mat-radio-button class="card-state-toggle" value="no-program">
+        Program Not Selected
+      </mat-radio-button>
+      <mat-radio-button class="card-state-toggle" value="no-campus">
+        Campus Not Selected
+      </mat-radio-button>
+    </mat-radio-group>
+  </section>
+</div>
 
-    <mat-accordion multi="false" class="accordion-child">
-      <mat-expansion-panel
-        [class.mat-elevation-z0]="true"
-        class="expansion-panel-child"
-        (opened)="panel1OpenState = true"
-        (closed)="panel1OpenState = false"
-        hideToggle="true"
+<div [ngSwitch]="panelState">
+  <div class="exp-panel-container" *ngSwitchCase="panelStateIsBase">
+    <p class="exp-panel-label">Select a Graduate Program:</p>
+    <mat-accordion multi="true">
+      <mat-expansion-panel        
+        showToggle="true"
+        class="expansion-panel-parent"
       >
         <mat-expansion-panel-header>
-          <mat-panel-title
-            >Adult-Gerontology Acute Care Nurse Practitioner
-            Track</mat-panel-title
+          Registered Nurse to MSN,&nbsp;<span class="label-abbreviation"
+            >RN to MSN</span
           >
-          <img
-            *ngIf="panel1OpenState"
-            src="../../../assets/icons/form-card-checkmark-active.svg"
-            alt=""
-          />
-          <img
-            *ngIf="!panel1OpenState"
-            src="../../../assets/icons/form-card-checkmark-inactive.svg"
-            alt=""
-          />
         </mat-expansion-panel-header>
 
-        <p class="exp-panel-child-content">
-          <i class="bsn-disclaimer"
-            >You must be a licensed registered nurse and have completed a
-            Bachelor of Science in Nursing degree or a bachelor's degree in a
-            closely related field to apply for this program.</i
+        <mat-accordion multi="false" class="accordion-child">
+          <mat-expansion-panel
+            [class.mat-elevation-z0]="true"
+            class="expansion-panel-child"            
+            (opened)="panel1OpenState = true"
+            (closed)="panel1OpenState = false"
+            hideToggle="true"
           >
-        </p>
-        <p>Which WCU campus do you want to pursue this track at?</p>
-        <mat-button-toggle-group
-          class="vertical-form-btn-group"
-          color="primary"
-          vertical
-          name="campus"
-          aria-label="campus"
-        >
-          <mat-button-toggle class="vertical-form-btn" value="online"
-            >Online</mat-button-toggle
+            <mat-expansion-panel-header>
+              <mat-panel-title
+                >Adult-Gerontology Acute Care Nurse Practitioner
+                Track</mat-panel-title
+              >
+              <img
+                *ngIf="panel1OpenState"
+                src="../../../assets/icons/form-card-checkmark-active.svg"
+                alt=""
+              />
+              <img
+                *ngIf="!panel1OpenState"
+                src="../../../assets/icons/form-card-checkmark-inactive.svg"
+                alt=""
+              />
+            </mat-expansion-panel-header>
+
+            <p class="exp-panel-child-content">
+              <i class="bsn-disclaimer"
+                >You must be a licensed registered nurse and have completed a
+                Bachelor of Science in Nursing degree or a bachelor's degree in
+                a closely related field to apply for this program.</i
+              >
+            </p>
+            <p>Which WCU campus do you want to pursue this track at?</p>
+            <mat-button-toggle-group
+              class="vertical-form-btn-group"
+              color="primary"
+              vertical
+              name="campus"
+              aria-label="campus"
+            >
+              <mat-button-toggle class="vertical-form-btn" value="online"
+                >Online</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="ontario"
+                >Ontario, California</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="miami"
+                >Miami, Florida</mat-button-toggle
+              >
+            </mat-button-toggle-group>
+          </mat-expansion-panel>
+          <mat-expansion-panel
+            [class.mat-elevation-z0]="true"
+            class="expansion-panel-child"
+            (opened)="panel2OpenState = true"
+            (closed)="panel2OpenState = false"
+            hideToggle="true"
           >
-          <mat-button-toggle class="vertical-form-btn" value="ontario"
-            >Ontario, California</mat-button-toggle
+            <mat-expansion-panel-header>
+              <mat-panel-title
+                >Adult-Gerontology Primary Care Nurse Practitioner
+                Track</mat-panel-title
+              >
+              <img
+                *ngIf="panel2OpenState"
+                src="../../../assets/icons/form-card-checkmark-active.svg"
+                alt=""
+              />
+              <img
+                *ngIf="!panel2OpenState"
+                src="../../../assets/icons/form-card-checkmark-inactive.svg"
+                alt=""
+              />
+            </mat-expansion-panel-header>
+            <p>Which WCU campus do you want to pursue this track at?</p>
+            <mat-button-toggle-group
+              class="vertical-form-btn-group"
+              color="primary"
+              vertical
+              name="campus"
+              aria-label="campus"
+            >
+              <mat-button-toggle class="vertical-form-btn" value="online"
+                >Online</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="ontario"
+                >Ontario, California</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="miami"
+                >Miami, Florida</mat-button-toggle
+              >
+            </mat-button-toggle-group>
+          </mat-expansion-panel>
+          <mat-expansion-panel
+            [class.mat-elevation-z0]="true"
+            class="expansion-panel-child"
+            (opened)="panel3OpenState = true"
+            (closed)="panel3OpenState = false"
+            hideToggle="true"
           >
-          <mat-button-toggle class="vertical-form-btn" value="miami"
-            >Miami, Florida</mat-button-toggle
+            <mat-expansion-panel-header>
+              <mat-panel-title>Family Nurse Practitioner Track</mat-panel-title>
+              <img
+                *ngIf="panel3OpenState"
+                src="../../../assets/icons/form-card-checkmark-active.svg"
+                alt=""
+              />
+              <img
+                *ngIf="!panel3OpenState"
+                src="../../../assets/icons/form-card-checkmark-inactive.svg"
+                alt=""
+              />
+            </mat-expansion-panel-header>
+            <p>Which WCU campus do you want to pursue this track at?</p>
+            <mat-button-toggle-group
+              class="vertical-form-btn-group"
+              color="primary"
+              vertical
+              name="campus"
+              aria-label="campus"
+            >
+              <mat-button-toggle class="vertical-form-btn" value="online"
+                >Online</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="ontario"
+                >Ontario, California</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="miami"
+                >Miami, Florida</mat-button-toggle
+              >
+            </mat-button-toggle-group>
+          </mat-expansion-panel>
+          <mat-expansion-panel
+            [class.mat-elevation-z0]="true"
+            class="expansion-panel-child"
+            (opened)="panel4OpenState = true"
+            (closed)="panel4OpenState = false"
+            hideToggle="true"
           >
-        </mat-button-toggle-group>
-      </mat-expansion-panel>
-      <mat-expansion-panel
-        [class.mat-elevation-z0]="true"
-        class="expansion-panel-child"
-        (opened)="panel2OpenState = true"
-        (closed)="panel2OpenState = false"
-        hideToggle="true"
-      >
-        <mat-expansion-panel-header>
-          <mat-panel-title
-            >Adult-Gerontology Primary Care Nurse Practitioner
-            Track</mat-panel-title
+            <mat-expansion-panel-header>
+              <mat-panel-title>Nurse Educator Track</mat-panel-title>
+              <img
+                *ngIf="panel4OpenState"
+                src="../../../assets/icons/form-card-checkmark-active.svg"
+                alt=""
+              />
+              <img
+                *ngIf="!panel4OpenState"
+                src="../../../assets/icons/form-card-checkmark-inactive.svg"
+                alt=""
+              />
+            </mat-expansion-panel-header>
+            <p>Which WCU campus do you want to pursue this track at?</p>
+            <mat-button-toggle-group
+              class="vertical-form-btn-group"
+              color="primary"
+              vertical
+              name="campus"
+              aria-label="campus"
+            >
+              <mat-button-toggle class="vertical-form-btn" value="online"
+                >Online</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="ontario"
+                >Ontario, California</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="miami"
+                >Miami, Florida</mat-button-toggle
+              >
+            </mat-button-toggle-group>
+          </mat-expansion-panel>
+          <mat-expansion-panel
+            [class.mat-elevation-z0]="true"
+            class="expansion-panel-child"
+            (opened)="panel5OpenState = true"
+            (closed)="panel5OpenState = false"
+            hideToggle="true"
           >
-          <img
-            *ngIf="panel2OpenState"
-            src="../../../assets/icons/form-card-checkmark-active.svg"
-            alt=""
-          />
-          <img
-            *ngIf="!panel2OpenState"
-            src="../../../assets/icons/form-card-checkmark-inactive.svg"
-            alt=""
-          />
-        </mat-expansion-panel-header>
-        <p>Which WCU campus do you want to pursue this track at?</p>
-        <mat-button-toggle-group
-          class="vertical-form-btn-group"
-          color="primary"
-          vertical
-          name="campus"
-          aria-label="campus"
-        >
-          <mat-button-toggle class="vertical-form-btn" value="online"
-            >Online</mat-button-toggle
-          >
-          <mat-button-toggle class="vertical-form-btn" value="ontario"
-            >Ontario, California</mat-button-toggle
-          >
-          <mat-button-toggle class="vertical-form-btn" value="miami"
-            >Miami, Florida</mat-button-toggle
-          >
-        </mat-button-toggle-group>
-      </mat-expansion-panel>
-      <mat-expansion-panel
-        [class.mat-elevation-z0]="true"
-        class="expansion-panel-child"
-        (opened)="panel3OpenState = true"
-        (closed)="panel3OpenState = false"
-        hideToggle="true"
-      >
-        <mat-expansion-panel-header>
-          <mat-panel-title>Family Nurse Practitioner Track</mat-panel-title>
-          <img
-            *ngIf="panel3OpenState"
-            src="../../../assets/icons/form-card-checkmark-active.svg"
-            alt=""
-          />
-          <img
-            *ngIf="!panel3OpenState"
-            src="../../../assets/icons/form-card-checkmark-inactive.svg"
-            alt=""
-          />
-        </mat-expansion-panel-header>
-        <p>Which WCU campus do you want to pursue this track at?</p>
-        <mat-button-toggle-group
-          class="vertical-form-btn-group"
-          color="primary"
-          vertical
-          name="campus"
-          aria-label="campus"
-        >
-          <mat-button-toggle class="vertical-form-btn" value="online"
-            >Online</mat-button-toggle
-          >
-          <mat-button-toggle class="vertical-form-btn" value="ontario"
-            >Ontario, California</mat-button-toggle
-          >
-          <mat-button-toggle class="vertical-form-btn" value="miami"
-            >Miami, Florida</mat-button-toggle
-          >
-        </mat-button-toggle-group>
-      </mat-expansion-panel>
-      <mat-expansion-panel
-        [class.mat-elevation-z0]="true"
-        class="expansion-panel-child"
-        (opened)="panel4OpenState = true"
-        (closed)="panel4OpenState = false"
-        hideToggle="true"
-      >
-        <mat-expansion-panel-header>
-          <mat-panel-title>Nurse Educator Track</mat-panel-title>
-          <img
-            *ngIf="panel4OpenState"
-            src="../../../assets/icons/form-card-checkmark-active.svg"
-            alt=""
-          />
-          <img
-            *ngIf="!panel4OpenState"
-            src="../../../assets/icons/form-card-checkmark-inactive.svg"
-            alt=""
-          />
-        </mat-expansion-panel-header>
-        <p>Which WCU campus do you want to pursue this track at?</p>
-        <mat-button-toggle-group
-          class="vertical-form-btn-group"
-          color="primary"
-          vertical
-          name="campus"
-          aria-label="campus"
-        >
-          <mat-button-toggle class="vertical-form-btn" value="online"
-            >Online</mat-button-toggle
-          >
-          <mat-button-toggle class="vertical-form-btn" value="ontario"
-            >Ontario, California</mat-button-toggle
-          >
-          <mat-button-toggle class="vertical-form-btn" value="miami"
-            >Miami, Florida</mat-button-toggle
-          >
-        </mat-button-toggle-group>
-      </mat-expansion-panel>
-      <mat-expansion-panel
-        [class.mat-elevation-z0]="true"
-        class="expansion-panel-child"
-        (opened)="panel5OpenState = true"
-        (closed)="panel5OpenState = false"
-        hideToggle="true"
-      >
-        <mat-expansion-panel-header>
-          <mat-panel-title>Nurse Leader Track</mat-panel-title>
-          <img
-            *ngIf="panel5OpenState"
-            src="../../../assets/icons/form-card-checkmark-active.svg"
-            alt=""
-          />
-          <img
-            *ngIf="!panel5OpenState"
-            src="../../../assets/icons/form-card-checkmark-inactive.svg"
-            alt=""
-          />
-        </mat-expansion-panel-header>
-        <p>Which WCU campus do you want to pursue this track at?</p>
-        <mat-button-toggle-group
-          class="vertical-form-btn-group"
-          color="primary"
-          vertical
-          name="campus"
-          aria-label="campus"
-        >
-          <mat-button-toggle class="vertical-form-btn" value="online"
-            >Online</mat-button-toggle
-          >
-          <mat-button-toggle class="vertical-form-btn" value="ontario"
-            >Ontario, California</mat-button-toggle
-          >
-          <mat-button-toggle class="vertical-form-btn" value="miami"
-            >Miami, Florida</mat-button-toggle
-          >
-        </mat-button-toggle-group>
+            <mat-expansion-panel-header>
+              <mat-panel-title>Nurse Leader Track</mat-panel-title>
+              <img
+                *ngIf="panel5OpenState"
+                src="../../../assets/icons/form-card-checkmark-active.svg"
+                alt=""
+              />
+              <img
+                *ngIf="!panel5OpenState"
+                src="../../../assets/icons/form-card-checkmark-inactive.svg"
+                alt=""
+              />
+            </mat-expansion-panel-header>
+            <p>Which WCU campus do you want to pursue this track at?</p>
+            <mat-button-toggle-group
+              class="vertical-form-btn-group"
+              color="primary"
+              vertical
+              name="campus"
+              aria-label="campus"
+            >
+              <mat-button-toggle class="vertical-form-btn" value="online"
+                >Online</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="ontario"
+                >Ontario, California</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="miami"
+                >Miami, Florida</mat-button-toggle
+              >
+            </mat-button-toggle-group>
+          </mat-expansion-panel>
+        </mat-accordion>
       </mat-expansion-panel>
     </mat-accordion>
-  </mat-expansion-panel>
-</mat-accordion>
-
-<mat-accordion class="accordion-parent" multi="true">
-  <mat-expansion-panel showToggle="true" class="expansion-panel-parent">
-    <mat-expansion-panel-header class="expansion-panel-parent-label">
-      Master of Science in Nursing,&nbsp;<span class="label-abbreviation"
-        >MSN</span
-      >
-    </mat-expansion-panel-header>
-    <mat-accordion multi="false" class="accordion-child">
-      <mat-expansion-panel
-        [class.mat-elevation-z0]="true"
-        class="expansion-panel-child"
-        (opened)="panel1OpenState = true"
-        (closed)="panel1OpenState = false"
-        hideToggle="true"
+  </div>
+  <div class="exp-panel-container" *ngSwitchCase="panelStateIsNoProgram">
+    <p class="exp-panel-label exp-panel-warning-text">Select a Graduate Program:</p>    
+    <mat-accordion multi="true">
+      <mat-expansion-panel        
+        showToggle="true"
+        class="expansion-panel-parent"
       >
         <mat-expansion-panel-header>
-          <mat-panel-title
-            >Adult-Gerontology Acute Care Nurse Practitioner
-            Track</mat-panel-title
+          Registered Nurse to MSN,&nbsp;<span class="label-abbreviation"
+            >RN to MSN</span
           >
-          <img
-            *ngIf="panel1OpenState"
-            src="../../../assets/icons/form-card-checkmark-active.svg"
-            alt=""
-          />
-          <img
-            *ngIf="!panel1OpenState"
-            src="../../../assets/icons/form-card-checkmark-inactive.svg"
-            alt=""
-          />
         </mat-expansion-panel-header>
 
-        <p class="exp-panel-child-content">
-          <i class="bsn-disclaimer"
-            >You must be a licensed registered nurse and have completed a
-            Bachelor of Science in Nursing degree or a bachelor's degree in a
-            closely related field to apply for this program.</i
+        <mat-accordion multi="false" class="accordion-child">
+          <mat-expansion-panel
+            [class.mat-elevation-z0]="true"
+            class="expansion-panel-child"            
+            (opened)="panel1OpenState = true"
+            (closed)="panel1OpenState = false"
+            hideToggle="true"
           >
-        </p>
-        <p>Which WCU campus do you want to pursue this track at?</p>
-        <mat-button-toggle-group
-          class="vertical-form-btn-group"
-          color="primary"
-          vertical
-          name="campus"
-          aria-label="campus"
-        >
-          <mat-button-toggle class="vertical-form-btn" value="online"
-            >Online</mat-button-toggle
+            <mat-expansion-panel-header>
+              <mat-panel-title
+                >Adult-Gerontology Acute Care Nurse Practitioner
+                Track</mat-panel-title
+              >
+              <img
+                *ngIf="panel1OpenState"
+                src="../../../assets/icons/form-card-checkmark-active.svg"
+                alt=""
+              />
+              <img
+                *ngIf="!panel1OpenState"
+                src="../../../assets/icons/form-card-checkmark-inactive.svg"
+                alt=""
+              />
+            </mat-expansion-panel-header>
+
+            <p class="exp-panel-child-content">
+              <i class="bsn-disclaimer"
+                >You must be a licensed registered nurse and have completed a
+                Bachelor of Science in Nursing degree or a bachelor's degree in
+                a closely related field to apply for this program.</i
+              >
+            </p>
+            <p>Which WCU campus do you want to pursue this track at?</p>
+            <mat-button-toggle-group
+              class="vertical-form-btn-group"
+              color="primary"
+              vertical
+              name="campus"
+              aria-label="campus"
+            >
+              <mat-button-toggle class="vertical-form-btn" value="online"
+                >Online</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="ontario"
+                >Ontario, California</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="miami"
+                >Miami, Florida</mat-button-toggle
+              >
+            </mat-button-toggle-group>
+          </mat-expansion-panel>
+          <mat-expansion-panel
+            [class.mat-elevation-z0]="true"
+            class="expansion-panel-child"
+            (opened)="panel2OpenState = true"
+            (closed)="panel2OpenState = false"
+            hideToggle="true"
           >
-          <mat-button-toggle class="vertical-form-btn" value="ontario"
-            >Ontario, California</mat-button-toggle
+            <mat-expansion-panel-header>
+              <mat-panel-title
+                >Adult-Gerontology Primary Care Nurse Practitioner
+                Track</mat-panel-title
+              >
+              <img
+                *ngIf="panel2OpenState"
+                src="../../../assets/icons/form-card-checkmark-active.svg"
+                alt=""
+              />
+              <img
+                *ngIf="!panel2OpenState"
+                src="../../../assets/icons/form-card-checkmark-inactive.svg"
+                alt=""
+              />
+            </mat-expansion-panel-header>
+            <p>Which WCU campus do you want to pursue this track at?</p>
+            <mat-button-toggle-group
+              class="vertical-form-btn-group"
+              color="primary"
+              vertical
+              name="campus"
+              aria-label="campus"
+            >
+              <mat-button-toggle class="vertical-form-btn" value="online"
+                >Online</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="ontario"
+                >Ontario, California</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="miami"
+                >Miami, Florida</mat-button-toggle
+              >
+            </mat-button-toggle-group>
+          </mat-expansion-panel>
+          <mat-expansion-panel
+            [class.mat-elevation-z0]="true"
+            class="expansion-panel-child"
+            (opened)="panel3OpenState = true"
+            (closed)="panel3OpenState = false"
+            hideToggle="true"
           >
-          <mat-button-toggle class="vertical-form-btn" value="miami"
-            >Miami, Florida</mat-button-toggle
+            <mat-expansion-panel-header>
+              <mat-panel-title>Family Nurse Practitioner Track</mat-panel-title>
+              <img
+                *ngIf="panel3OpenState"
+                src="../../../assets/icons/form-card-checkmark-active.svg"
+                alt=""
+              />
+              <img
+                *ngIf="!panel3OpenState"
+                src="../../../assets/icons/form-card-checkmark-inactive.svg"
+                alt=""
+              />
+            </mat-expansion-panel-header>
+            <p>Which WCU campus do you want to pursue this track at?</p>
+            <mat-button-toggle-group
+              class="vertical-form-btn-group"
+              color="primary"
+              vertical
+              name="campus"
+              aria-label="campus"
+            >
+              <mat-button-toggle class="vertical-form-btn" value="online"
+                >Online</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="ontario"
+                >Ontario, California</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="miami"
+                >Miami, Florida</mat-button-toggle
+              >
+            </mat-button-toggle-group>
+          </mat-expansion-panel>
+          <mat-expansion-panel
+            [class.mat-elevation-z0]="true"
+            class="expansion-panel-child"
+            (opened)="panel4OpenState = true"
+            (closed)="panel4OpenState = false"
+            hideToggle="true"
           >
-        </mat-button-toggle-group>
-      </mat-expansion-panel>
-      <mat-expansion-panel
-        [class.mat-elevation-z0]="true"
-        class="expansion-panel-child"
-        (opened)="panel2OpenState = true"
-        (closed)="panel2OpenState = false"
-        hideToggle="true"
-      >
-        <mat-expansion-panel-header>
-          <mat-panel-title
-            >Adult-Gerontology Primary Care Nurse Practitioner
-            Track</mat-panel-title
+            <mat-expansion-panel-header>
+              <mat-panel-title>Nurse Educator Track</mat-panel-title>
+              <img
+                *ngIf="panel4OpenState"
+                src="../../../assets/icons/form-card-checkmark-active.svg"
+                alt=""
+              />
+              <img
+                *ngIf="!panel4OpenState"
+                src="../../../assets/icons/form-card-checkmark-inactive.svg"
+                alt=""
+              />
+            </mat-expansion-panel-header>
+            <p>Which WCU campus do you want to pursue this track at?</p>
+            <mat-button-toggle-group
+              class="vertical-form-btn-group"
+              color="primary"
+              vertical
+              name="campus"
+              aria-label="campus"
+            >
+              <mat-button-toggle class="vertical-form-btn" value="online"
+                >Online</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="ontario"
+                >Ontario, California</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="miami"
+                >Miami, Florida</mat-button-toggle
+              >
+            </mat-button-toggle-group>
+          </mat-expansion-panel>
+          <mat-expansion-panel
+            [class.mat-elevation-z0]="true"
+            class="expansion-panel-child"
+            (opened)="panel5OpenState = true"
+            (closed)="panel5OpenState = false"
+            hideToggle="true"
           >
-          <img
-            *ngIf="panel2OpenState"
-            src="../../../assets/icons/form-card-checkmark-active.svg"
-            alt=""
-          />
-          <img
-            *ngIf="!panel2OpenState"
-            src="../../../assets/icons/form-card-checkmark-inactive.svg"
-            alt=""
-          />
-        </mat-expansion-panel-header>
-        <p>Which WCU campus do you want to pursue this track at?</p>
-        <mat-button-toggle-group
-          class="vertical-form-btn-group"
-          color="primary"
-          vertical
-          name="campus"
-          aria-label="campus"
-        >
-          <mat-button-toggle class="vertical-form-btn" value="online"
-            >Online</mat-button-toggle
-          >
-          <mat-button-toggle class="vertical-form-btn" value="ontario"
-            >Ontario, California</mat-button-toggle
-          >
-          <mat-button-toggle class="vertical-form-btn" value="miami"
-            >Miami, Florida</mat-button-toggle
-          >
-        </mat-button-toggle-group>
-      </mat-expansion-panel>
-      <mat-expansion-panel
-        [class.mat-elevation-z0]="true"
-        class="expansion-panel-child"
-        (opened)="panel3OpenState = true"
-        (closed)="panel3OpenState = false"
-        hideToggle="true"
-      >
-        <mat-expansion-panel-header>
-          <mat-panel-title>Family Nurse Practitioner Track</mat-panel-title>
-          <img
-            *ngIf="panel3OpenState"
-            src="../../../assets/icons/form-card-checkmark-active.svg"
-            alt=""
-          />
-          <img
-            *ngIf="!panel3OpenState"
-            src="../../../assets/icons/form-card-checkmark-inactive.svg"
-            alt=""
-          />
-        </mat-expansion-panel-header>
-        <p>Which WCU campus do you want to pursue this track at?</p>
-        <mat-button-toggle-group
-          class="vertical-form-btn-group"
-          color="primary"
-          vertical
-          name="campus"
-          aria-label="campus"
-        >
-          <mat-button-toggle class="vertical-form-btn" value="online"
-            >Online</mat-button-toggle
-          >
-          <mat-button-toggle class="vertical-form-btn" value="ontario"
-            >Ontario, California</mat-button-toggle
-          >
-          <mat-button-toggle class="vertical-form-btn" value="miami"
-            >Miami, Florida</mat-button-toggle
-          >
-        </mat-button-toggle-group>
-      </mat-expansion-panel>
-      <mat-expansion-panel
-        [class.mat-elevation-z0]="true"
-        class="expansion-panel-child"
-        (opened)="panel4OpenState = true"
-        (closed)="panel4OpenState = false"
-        hideToggle="true"
-      >
-        <mat-expansion-panel-header>
-          <mat-panel-title>Nurse Educator Track</mat-panel-title>
-          <img
-            *ngIf="panel4OpenState"
-            src="../../../assets/icons/form-card-checkmark-active.svg"
-            alt=""
-          />
-          <img
-            *ngIf="!panel4OpenState"
-            src="../../../assets/icons/form-card-checkmark-inactive.svg"
-            alt=""
-          />
-        </mat-expansion-panel-header>
-        <p>Which WCU campus do you want to pursue this track at?</p>
-        <mat-button-toggle-group
-          class="vertical-form-btn-group"
-          color="primary"
-          vertical
-          name="campus"
-          aria-label="campus"
-        >
-          <mat-button-toggle class="vertical-form-btn" value="online"
-            >Online</mat-button-toggle
-          >
-          <mat-button-toggle class="vertical-form-btn" value="ontario"
-            >Ontario, California</mat-button-toggle
-          >
-          <mat-button-toggle class="vertical-form-btn" value="miami"
-            >Miami, Florida</mat-button-toggle
-          >
-        </mat-button-toggle-group>
-      </mat-expansion-panel>
-      <mat-expansion-panel
-        [class.mat-elevation-z0]="true"
-        class="expansion-panel-child"
-        (opened)="panel5OpenState = true"
-        (closed)="panel5OpenState = false"
-        hideToggle="true"
-      >
-        <mat-expansion-panel-header>
-          <mat-panel-title>Nurse Leader Track</mat-panel-title>
-          <img
-            *ngIf="panel5OpenState"
-            src="../../../assets/icons/form-card-checkmark-active.svg"
-            alt=""
-          />
-          <img
-            *ngIf="!panel5OpenState"
-            src="../../../assets/icons/form-card-checkmark-inactive.svg"
-            alt=""
-          />
-        </mat-expansion-panel-header>
-        <p>Which WCU campus do you want to pursue this track at?</p>
-        <mat-button-toggle-group
-          class="vertical-form-btn-group"
-          color="primary"
-          vertical
-          name="campus"
-          aria-label="campus"
-        >
-          <mat-button-toggle class="vertical-form-btn" value="online"
-            >Online</mat-button-toggle
-          >
-          <mat-button-toggle class="vertical-form-btn" value="ontario"
-            >Ontario, California</mat-button-toggle
-          >
-          <mat-button-toggle class="vertical-form-btn" value="miami"
-            >Miami, Florida</mat-button-toggle
-          >
-        </mat-button-toggle-group>
-      </mat-expansion-panel>
-      <mat-expansion-panel
-        [class.mat-elevation-z0]="true"
-        class="expansion-panel-child"
-        (opened)="panel6OpenState = true"
-        (closed)="panel6OpenState = false"
-        hideToggle="true"
-      >
-        <mat-expansion-panel-header>
-          <mat-panel-title>Nursing Informatics Track</mat-panel-title>
-          <img
-            *ngIf="panel6OpenState"
-            src="../../../assets/icons/form-card-checkmark-active.svg"
-            alt=""
-          />
-          <img
-            *ngIf="!panel6OpenState"
-            src="../../../assets/icons/form-card-checkmark-inactive.svg"
-            alt=""
-          />
-        </mat-expansion-panel-header>
-        <p>Which WCU campus do you want to pursue this track at?</p>
-        <mat-button-toggle-group
-          class="vertical-form-btn-group"
-          color="primary"
-          vertical
-          name="campus"
-          aria-label="campus"
-        >
-          <mat-button-toggle class="vertical-form-btn" value="online"
-            >Online</mat-button-toggle
-          >
-          <mat-button-toggle class="vertical-form-btn" value="ontario"
-            >Ontario, California</mat-button-toggle
-          >
-          <mat-button-toggle class="vertical-form-btn" value="miami"
-            >Miami, Florida</mat-button-toggle
-          >
-        </mat-button-toggle-group>
-      </mat-expansion-panel>
-      <mat-expansion-panel
-        [class.mat-elevation-z0]="true"
-        class="expansion-panel-child"
-        (opened)="panel7OpenState = true"
-        (closed)="panel7OpenState = false"
-        hideToggle="true"
-      >
-        <mat-expansion-panel-header>
-          <mat-panel-title
-            >Psychiatric-Mental Health Nurse Practitioner Track</mat-panel-title
-          >
-          <img
-            *ngIf="panel7OpenState"
-            src="../../../assets/icons/form-card-checkmark-active.svg"
-            alt=""
-          />
-          <img
-            *ngIf="!panel7OpenState"
-            src="../../../assets/icons/form-card-checkmark-inactive.svg"
-            alt=""
-          />
-        </mat-expansion-panel-header>
-        <p>Which WCU campus do you want to pursue this track at?</p>
-        <mat-button-toggle-group
-          class="vertical-form-btn-group"
-          color="primary"
-          vertical
-          name="campus"
-          aria-label="campus"
-        >
-          <mat-button-toggle class="vertical-form-btn" value="online"
-            >Online</mat-button-toggle
-          >
-          <mat-button-toggle class="vertical-form-btn" value="ontario"
-            >Ontario, California</mat-button-toggle
-          >
-          <mat-button-toggle class="vertical-form-btn" value="miami"
-            >Miami, Florida</mat-button-toggle
-          >
-        </mat-button-toggle-group>
+            <mat-expansion-panel-header>
+              <mat-panel-title>Nurse Leader Track</mat-panel-title>
+              <img
+                *ngIf="panel5OpenState"
+                src="../../../assets/icons/form-card-checkmark-active.svg"
+                alt=""
+              />
+              <img
+                *ngIf="!panel5OpenState"
+                src="../../../assets/icons/form-card-checkmark-inactive.svg"
+                alt=""
+              />
+            </mat-expansion-panel-header>
+            <p>Which WCU campus do you want to pursue this track at?</p>
+            <mat-button-toggle-group
+              class="vertical-form-btn-group"
+              color="primary"
+              vertical
+              name="campus"
+              aria-label="campus"
+            >
+              <mat-button-toggle class="vertical-form-btn" value="online"
+                >Online</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="ontario"
+                >Ontario, California</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="miami"
+                >Miami, Florida</mat-button-toggle
+              >
+            </mat-button-toggle-group>
+          </mat-expansion-panel>
+        </mat-accordion>
       </mat-expansion-panel>
     </mat-accordion>
-  </mat-expansion-panel>
-</mat-accordion>
+    <div class="exp-panel-warning-text-container">
+      <p class="exp-panel-warning-text form-level">Select a program before selecting a campus</p>
+    </div>
+  </div>
+  <div class="exp-panel-container" *ngSwitchCase="panelStateIsNoCampus">
+    <p class="exp-panel-label exp-panel-warning-text">Select a Graduate Program:</p>
+    <mat-accordion multi="true">
+      <mat-expansion-panel
+        [expanded]="true"
+        showToggle="true"
+        class="expansion-panel-parent"
+      >
+        <mat-expansion-panel-header>
+          Registered Nurse to MSN,&nbsp;<span class="label-abbreviation"
+            >RN to MSN</span
+          >
+        </mat-expansion-panel-header>
+
+        <mat-accordion multi="false" class="accordion-child">
+          <mat-expansion-panel
+            [class.mat-elevation-z0]="true"
+            class="expansion-panel-child"
+            [expanded]="true"
+            (opened)="panel1OpenState = true"
+            (closed)="panel1OpenState = false"
+            hideToggle="true"
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title
+                >Adult-Gerontology Acute Care Nurse Practitioner
+                Track</mat-panel-title
+              >
+              <img
+                *ngIf="panel1OpenState"
+                src="../../../assets/icons/form-card-checkmark-active.svg"
+                alt=""
+              />
+              <img
+                *ngIf="!panel1OpenState"
+                src="../../../assets/icons/form-card-checkmark-inactive.svg"
+                alt=""
+              />
+            </mat-expansion-panel-header>
+
+            <p class="exp-panel-child-content">
+              <i class="bsn-disclaimer"
+                >You must be a licensed registered nurse and have completed a
+                Bachelor of Science in Nursing degree or a bachelor's degree in
+                a closely related field to apply for this program.</i
+              >
+            </p>
+            <p class="exp-panel-warning-text">Which WCU campus do you want to pursue this track at?</p>
+            <mat-button-toggle-group
+              class="vertical-form-btn-group"
+              color="primary"
+              vertical
+              name="campus"
+              aria-label="campus"
+            >
+              <mat-button-toggle class="vertical-form-btn" value="online"
+                >Online</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="ontario"
+                >Ontario, California</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="miami"
+                >Miami, Florida</mat-button-toggle
+              >
+            </mat-button-toggle-group>
+          </mat-expansion-panel>
+          <mat-expansion-panel
+            [class.mat-elevation-z0]="true"
+            class="expansion-panel-child"
+            (opened)="panel2OpenState = true"
+            (closed)="panel2OpenState = false"
+            hideToggle="true"
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title
+                >Adult-Gerontology Primary Care Nurse Practitioner
+                Track</mat-panel-title
+              >
+              <img
+                *ngIf="panel2OpenState"
+                src="../../../assets/icons/form-card-checkmark-active.svg"
+                alt=""
+              />
+              <img
+                *ngIf="!panel2OpenState"
+                src="../../../assets/icons/form-card-checkmark-inactive.svg"
+                alt=""
+              />
+            </mat-expansion-panel-header>
+            <p>Which WCU campus do you want to pursue this track at?</p>
+            <mat-button-toggle-group
+              class="vertical-form-btn-group"
+              color="primary"
+              vertical
+              name="campus"
+              aria-label="campus"
+            >
+              <mat-button-toggle class="vertical-form-btn" value="online"
+                >Online</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="ontario"
+                >Ontario, California</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="miami"
+                >Miami, Florida</mat-button-toggle
+              >
+            </mat-button-toggle-group>
+          </mat-expansion-panel>
+          <mat-expansion-panel
+            [class.mat-elevation-z0]="true"
+            class="expansion-panel-child"
+            (opened)="panel3OpenState = true"
+            (closed)="panel3OpenState = false"
+            hideToggle="true"
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title>Family Nurse Practitioner Track</mat-panel-title>
+              <img
+                *ngIf="panel3OpenState"
+                src="../../../assets/icons/form-card-checkmark-active.svg"
+                alt=""
+              />
+              <img
+                *ngIf="!panel3OpenState"
+                src="../../../assets/icons/form-card-checkmark-inactive.svg"
+                alt=""
+              />
+            </mat-expansion-panel-header>
+            <p>Which WCU campus do you want to pursue this track at?</p>
+            <mat-button-toggle-group
+              class="vertical-form-btn-group"
+              color="primary"
+              vertical
+              name="campus"
+              aria-label="campus"
+            >
+              <mat-button-toggle class="vertical-form-btn" value="online"
+                >Online</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="ontario"
+                >Ontario, California</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="miami"
+                >Miami, Florida</mat-button-toggle
+              >
+            </mat-button-toggle-group>
+          </mat-expansion-panel>
+          <mat-expansion-panel
+            [class.mat-elevation-z0]="true"
+            class="expansion-panel-child"
+            (opened)="panel4OpenState = true"
+            (closed)="panel4OpenState = false"
+            hideToggle="true"
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title>Nurse Educator Track</mat-panel-title>
+              <img
+                *ngIf="panel4OpenState"
+                src="../../../assets/icons/form-card-checkmark-active.svg"
+                alt=""
+              />
+              <img
+                *ngIf="!panel4OpenState"
+                src="../../../assets/icons/form-card-checkmark-inactive.svg"
+                alt=""
+              />
+            </mat-expansion-panel-header>
+            <p>Which WCU campus do you want to pursue this track at?</p>
+            <mat-button-toggle-group
+              class="vertical-form-btn-group"
+              color="primary"
+              vertical
+              name="campus"
+              aria-label="campus"
+            >
+              <mat-button-toggle class="vertical-form-btn" value="online"
+                >Online</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="ontario"
+                >Ontario, California</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="miami"
+                >Miami, Florida</mat-button-toggle
+              >
+            </mat-button-toggle-group>
+          </mat-expansion-panel>
+          <mat-expansion-panel
+            [class.mat-elevation-z0]="true"
+            class="expansion-panel-child"
+            (opened)="panel5OpenState = true"
+            (closed)="panel5OpenState = false"
+            hideToggle="true"
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title>Nurse Leader Track</mat-panel-title>
+              <img
+                *ngIf="panel5OpenState"
+                src="../../../assets/icons/form-card-checkmark-active.svg"
+                alt=""
+              />
+              <img
+                *ngIf="!panel5OpenState"
+                src="../../../assets/icons/form-card-checkmark-inactive.svg"
+                alt=""
+              />
+            </mat-expansion-panel-header>
+            <p>Which WCU campus do you want to pursue this track at?</p>
+            <mat-button-toggle-group
+              class="vertical-form-btn-group"
+              color="primary"
+              vertical
+              name="campus"
+              aria-label="campus"
+            >
+              <mat-button-toggle class="vertical-form-btn" value="online"
+                >Online</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="ontario"
+                >Ontario, California</mat-button-toggle
+              >
+              <mat-button-toggle class="vertical-form-btn" value="miami"
+                >Miami, Florida</mat-button-toggle
+              >
+            </mat-button-toggle-group>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>
